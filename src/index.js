@@ -24,6 +24,10 @@ function onInput(country) {
         'Too many matches found. Please enter a more specific name.'
       );
     }
+    if (countries.length === 0) {
+      clearMarkup(refs.countryList);
+      clearMarkup(refs.countryInfo);
+    }
     if (countries.length >= 2 && countries.length <= 10) {
       clearMarkup(refs.countryList);
       clearMarkup(refs.countryInfo);
